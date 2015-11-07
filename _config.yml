@@ -10,5 +10,4 @@ github_username  : ngquerol
 # Build settings
 timezone    : Europe/Paris
 markdown    : kramdown
-highlighter : pygments
 permalink   : /blog/:year/:month/:day/:title
