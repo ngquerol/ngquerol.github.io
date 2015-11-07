@@ -1,0 +1,4 @@
+name: "Nicolas Gaulard-Querol"
+markdown: redcarpet
+highlighting: true
+permalink: /blog/:year/:month/:day/:title
