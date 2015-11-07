@@ -37,9 +37,9 @@ a:hover   { color: #AAAAC1; }
 
 pre, code {
   font-family: Menlo, Consolas, monospace;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow: auto;
 }
+
 /*****************************************************************************/
 /*
 /* Site
@@ -212,7 +212,6 @@ ul.posts span {
 
 /* code highlighting & terminal */
 .post pre {
-  overflow: scroll;
   border-radius: 2px;
   background-color: #f8f8f8;
   padding: 0 .4em;
@@ -249,10 +248,6 @@ ul.posts span {
 
   .container .post-title {
     font-size: 1.3em;
-  }
-
-  .container .post pre {
-    overflow: auto;
   }
 
   .container .footer .contact {
