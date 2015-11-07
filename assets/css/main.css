@@ -15,11 +15,12 @@ html, body { min-height: 100%; }
 body {
   color: #4b4b4b;
   background-color: #fff;
-  font: 16px Allerta, Arial, sans-serif;
+  font: 16px "Raleway Medium", Arial, sans-serif;
   margin: 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway Extra Bold", Arial, sans-serif;
   font-size: 1em;
   color: #aaa;
 }
@@ -34,6 +35,9 @@ a {
 }
 a:hover   { color: #AAAAC1; }
 
+pre, code {
+  font-family: Menlo, Consolas, monospace;
+}
 /*****************************************************************************/
 /*
 /* Site
@@ -55,6 +59,7 @@ a:hover   { color: #AAAAC1; }
 }
 
 .header .nav {
+  font-family: "Raleway Extra Bold";
   float: right;
   margin: 2em;
   margin-top: 1.8em;
@@ -99,9 +104,10 @@ a:hover   { color: #AAAAC1; }
 }
 
 .container .post-title {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   text-align: center;
-  font-size: 2em;
+  font-family: "Raleway Extra Bold";
+  font-size: 1.75em;
   font-weight: bold;
 }
 
@@ -170,7 +176,6 @@ ul.posts span {
 }
 
 .excerpt {
-  font-family: Vollkorn;
   font-size: .9em;
   color: #aaa;
 }
@@ -182,38 +187,20 @@ ul.posts span {
 /*****************************************************************************/
 
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  background-color: #f8f8f8;
-  padding: 0 .4em;
-  font-size: .85em;
-  line-height: 1.5em;
-}
-
 .post ul, .post ol {
   margin-left: 1.35em;
 }
 
-.post code {
-  border: 1px solid #ddd;
-  font-family: Inconsolata;
-}
-
-.post pre code {
-  border: none;
-}
-
-.lineno {
-  color: #aaa;
-}
-
 .post, .page {
-  font-family: Vollkorn;
+  font-size: 0.9em;
   padding: 0 2.5em;
   -webkit-animation: fadeIn .5s ease-out;
   -moz-animation: fadeIn .5s ease-out;
   animation: fadeIn .5s ease-out;
+}
+
+.page-title {
+  text-align: center;
 }
 
 .page abbr {
@@ -221,15 +208,26 @@ ul.posts span {
   border-bottom: 1px dashed;
 }
 
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #fff;
-  font-family: Inconsolata;
+/* code highlighting & terminal */
+.post pre {
+  overflow: scroll;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  padding: 0 .4em;
+  line-height: 1.5em;
+  font-size: .85em;
 }
 
-.post pre.terminal:before {
+.post .highlight, .post .terminal {
+  border: 1px solid #ddd;
+}
+
+.post .terminal {
+  background-color: #333;
+  color: #fff;
+}
+
+.post .terminal:before {
   content: "$ ";
   color: #fea63c;
   font-weight: bold;
@@ -245,10 +243,6 @@ ul.posts span {
   .header {
     text-align: center;
     height: 3em;
-  }
-
-  .container .page-title {
-    padding-top: 1.5em;
   }
 
   .container .post-title {

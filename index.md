@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: page
 title: Hey there !
 ---
 
@@ -10,10 +10,11 @@ Entreprises">MIAGE</abbr> in French universities).
 Here's a short and non exhaustive list of my interests:
 
 - Open Source & Free Software
+- UNIX (BSDs, Linux, OS X)
 - Programming (C, Java, OCaml, Lisp/Scheme)
 - Music (bass, guitar)
 - Cinema
 - Literature, especially science-fiction
 
 You can check my curriculum vitæ
-[here (fr)](/files/CV_Nicolas_Gaulard-Querol.pdf).
+[here (fr)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf).

@@ -1,56 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} / {{ site.name }}</title>
-    <meta name="viewport" content="width=device-width initial-scale=1">
+{% include header.html %}
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ site.url }}/assets/img/favicon.ico" />
+{{ content }}
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-
-    <!-- Syntax-highlighting CSS -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/syntax.css">
-
-    <!-- Fonts -->
-    <link href='{{ site.url }}/assets/css/fonts.css' rel='stylesheet' type='text/css'>
-    <link href="{{ site.url }}/assets/css/font-awesome.min.css" rel="stylesheet">
-
-  </head>
-  <body>
-
-    <div class="header">
-      <div class="avatarandtitle">
-        <img src="{{ site.url }}/assets/img/avatar.jpg" alt="" />
-        <h1>{{ site.name }}</h1>
-      </div>
-      <div class="nav">
-        <div class="nav-page"><a href="/">Accueil</a></div>
-        <div class="nav-separator">-</div>
-        <div class="nav-page"><a href="{{ site.url }}/projects">Projets</a></div>
-        <div class="nav-separator">-</div>
-        <div class="nav-page"><a href="{{ site.url }}/blog">Blog</a></div>
-      </div>
-    </div>
-
-    <div class="container">
-
-      {{ content }}
-
-      <div class="footer">
-        <div class="contact">
-          <a href="mailto:nicolas.gquerol@gmail.com"><i class="fa fa-envelope fa-fw fa-lg"></i>nicolas.gquerol@gmail.com</a>
-        </div>
-        <div class="contact">
-          <a href="https://github.com/ngquerol" target="_blank"><i class="fa fa-github-alt fa-fw fa-lg"></i>github.com/ngquerol</a>
-        </div>
-        <div class="contact">
-          <a href="https://twitter.com/NGQuerol" target="_blank"><i class="fa fa-twitter fa-fw fa-lg"></i>twitter.com/NGQuerol</a>
-        </div>
-      </div>
-    </div>
-
-  </body>
-</html>
+{% include footer.html %}
