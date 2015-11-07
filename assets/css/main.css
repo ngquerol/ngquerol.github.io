@@ -257,8 +257,7 @@ ul.posts span {
 
   .container .page-title {
     padding-top: 3em;
-    margin-left: 0;
-    text-align: center;
+    margin-top: 2em;
   }
 
   .container .posts {
@@ -289,6 +288,11 @@ ul.posts span {
 
   body {
     font-size: 0.9em;
+  }
+
+  .header .nav {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .container .post {
