@@ -206,7 +206,7 @@ ul.posts span {
 }
 
 .page abbr {
-  cursor: pointer;
+  cursor: help;
   border-bottom: 1px dashed;
 }
 
