@@ -3,13 +3,6 @@
 /* Common
 /*
 /*****************************************************************************/
-
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html, body { min-height: 100%; }
 
 body {
@@ -38,6 +31,8 @@ a:hover   { color: #AAAAC1; }
 pre, code {
   font-family: Menlo, Consolas, monospace;
   overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 
 /*****************************************************************************/
@@ -83,7 +78,7 @@ pre, code {
 
 .header .avatarandtitle img {
   vertical-align: middle;
-  border-radius: 50px;
+  border-radius: 999px;
   width: 50px;
 }
 
@@ -220,6 +215,7 @@ ul.posts span {
 }
 
 .post .highlight, .post .terminal {
+  margin: 0 1em;
   border: 1px solid #ddd;
 }
 
@@ -239,6 +235,18 @@ ul.posts span {
 /* Responsive layout
 /*
 /****************************************************************************/
+@media screen and (min-width: 1080px) {
+
+  .header {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 50%;
+  }
+}
+
 @media screen and (max-width: 767px) {
 
   .header {
