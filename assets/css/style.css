@@ -8,12 +8,12 @@ html, body { min-height: 100%; }
 body {
   color: #4b4b4b;
   background-color: #fff;
-  font: 16px "Raleway Medium", Arial, sans-serif;
+  font: 16px "Gentium Book Regular", Arial, sans-serif;
   margin: 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway Extra Bold", Arial, sans-serif;
+  font-family: "Raleway ExtraBold", Arial, sans-serif;
   font-size: 1em;
   color: #aaa;
 }
@@ -30,6 +30,7 @@ a:hover   { color: #AAAAC1; }
 
 pre, code {
   font-family: Menlo, Consolas, monospace;
+  font-size: 14px;
   overflow: auto;
   margin: 0;
   padding: 0;
@@ -56,7 +57,7 @@ pre, code {
 }
 
 .header .nav {
-  font-family: "Raleway Extra Bold";
+  font-family: "Raleway ExtraBold";
   float: right;
   margin: 2em;
   margin-top: 1.8em;
@@ -82,16 +83,11 @@ pre, code {
   width: 50px;
 }
 
-.header .nav a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .container {
   font-size: 1.15em;
   text-align: justify;
   line-height: 1.5em;
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -103,7 +99,7 @@ pre, code {
 .container .post-title {
   margin-bottom: 1.5em;
   text-align: center;
-  font-family: "Raleway Extra Bold";
+  font-family: "Raleway ExtraBold";
   font-size: 1.75em;
   font-weight: bold;
 }
@@ -115,6 +111,7 @@ pre, code {
 }
 
 .container .footer {
+  font-family: "Raleway Medium";
   font-size: .75em;
   color: #666;
   border-top: 2px solid #eee;
@@ -142,12 +139,32 @@ pre, code {
    /*
    /*****************************************************************************/
 ul.posts {
+  font-family: "Raleway Medium";
   list-style-type: none;
   margin-bottom: 2em;
   padding: 0 2.5em;
   -webkit-animation: fadeIn .5s ease-out;
   -moz-animation: fadeIn .5s ease-out;
   animation: fadeIn .5s ease-out;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+}
+
+ul.posts li a {
+  font-family: "Raleway Medium";
+}
+
+ul.posts li.excerpt {
+  font-family: "Gentium Book Regular";
+  font-size: .9em;
+  color: #aaa;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-size: .8em;
 }
 
 @-webkit-keyframes fadeIn {
@@ -163,20 +180,6 @@ ul.posts {
   to {opacity: 1;}
 }
 
-ul.posts li {
-  line-height: 1.75em;
-}
-
-ul.posts span {
-  color: #aaa;
-  font-size: .8em;
-}
-
-.excerpt {
-  font-size: .9em;
-  color: #aaa;
-}
-
 /*****************************************************************************/
 /*
    /* Content (page & posts)
@@ -189,7 +192,6 @@ ul.posts span {
 }
 
 .post, .page {
-  font-size: 0.9em;
   padding: 0 2.5em;
   -webkit-animation: fadeIn .5s ease-out;
   -moz-animation: fadeIn .5s ease-out;
@@ -210,7 +212,6 @@ ul.posts span {
   background-color: #f8f8f8;
   padding: 0 .4em;
   line-height: 1.5em;
-  font-size: .85em;
 }
 
 .post .highlight, .post .terminal {
