@@ -203,10 +203,6 @@ ul.posts span {
     border-bottom: 1px dashed;
 }
 
-.page ul {
-    list-style-type: none;
-}
-
 /* code highlighting & terminal */
 .post pre {
     background-color: #f8f8f8;
