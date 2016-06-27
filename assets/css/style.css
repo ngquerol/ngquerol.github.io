@@ -8,12 +8,13 @@ html, body { min-height: 100%; }
 body {
     color: #4b4b4b;
     background-color: #fff;
-    font: 15px "Open Sans Regular", Arial, sans-serif;
+    font: 15px "Fira Sans", Arial, sans-serif;
     margin: 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway ExtraBold", Arial, sans-serif;
+    font-family: "Fira Sans", Arial, sans-serif;
+    font-weight: 600;
     font-size: 1em;
     color: #aaa;
 }
@@ -29,7 +30,7 @@ a {
 a:hover   { color: #AAAAC1; }
 
 pre, code {
-    font-family: Menlo, Consolas, monospace;
+    font-family: "Fira Mono", Menlo, Consolas, monospace;
     font-size: 14px;
     overflow: auto;
     margin: 0;
@@ -66,7 +67,8 @@ blockquote {
 }
 
 .header .nav {
-    font-family: "Raleway ExtraBold";
+    font-family: "Fira Sans";
+    font-weight: 600;
     float: right;
     margin: 2em;
     margin-top: 1.8em;
@@ -105,13 +107,13 @@ blockquote {
 
 .container .post-title {
     text-align: center;
-    font-family: "Raleway ExtraBold";
+    font-family: "Fira Sans";
     font-size: 1.3em;
     font-weight: bold;
 }
 
 .container .footer {
-    font-family: "Raleway Medium";
+    font-family: "Fira Sans";
     font-size: .75em;
     color: #666;
     border-top: 2px solid #eee;
@@ -139,11 +141,11 @@ blockquote {
 /*
 /*****************************************************************************/
 ul.posts {
-    font-family: "Raleway Medium";
+    font-family: "Fira Sans";
     list-style-type: none;
     margin-bottom: 2em;
     padding: 0 2.5em;
-    
+
 	text-align: center;
 }
 
@@ -152,11 +154,11 @@ ul.posts li {
 }
 
 ul.posts li a {
-    font-family: "Raleway Medium";
+    font-family: "Fira Sans";
 }
 
 ul.posts li.excerpt {
-    font-family: "Open Sans Regular";
+    font-family: "Fira Sans";
     font-size: .9em;
     color: #aaa;
 }
