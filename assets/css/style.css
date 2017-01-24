@@ -1,49 +1,49 @@
-/*****************************************************************************/
 /*
-/* Common
-/*
-/*****************************************************************************/
+ * Common
+ */
+
 html, body { min-height: 100%; }
 
 body {
-    color: #4b4b4b;
-    background-color: #fff;
-    font: 15px "Fira Sans", Arial, sans-serif;
-    margin: 0 1em;
+  color: #4b4b4b;
+  background-color: #fff;
+  font: 15px "Fira Sans", Arial, sans-serif;
+  margin: 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Fira Sans", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 1em;
-    color: #aaa;
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  color: #aaa;
 }
 
 h1, h2 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
 a {
-    color: #8085C1;
-    text-decoration: none;
-    transition: color 250ms;
+  color: #8085C1;
+  text-decoration: none;
+  transition: color 250ms;
 }
 a:hover { color: #AAAAC1; }
 
 pre, code {
-    font-family: "Fira Mono", Menlo, Consolas, monospace;
-    font-size: 14px;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
+  font-family: "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 14px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote {
-    border-left: 5px solid #e0e0e0;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #888;
-    margin: 0 1em;
-    padding: .5em;
+  border-left: 5px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: .85em;
+  color: #888;
+  margin: 0 1em;
+  padding: .5em;
 }
 
 blockquote  p {
@@ -51,22 +51,21 @@ blockquote  p {
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  background: linear-gradient(to right, white, #aaa, white);
 }
 
-/*****************************************************************************/
 /*
-/* Site
-/*
-/*****************************************************************************/
+ * Site
+ */
 
 .header {
-    font-size: 1em;
-    height: 5em;
-    margin: 0 auto;
-    max-width: 45em;
+  font-size: 1em;
+  height: 5em;
+  margin: 0 auto;
+  max-width: 45em;
 }
 
 .header .avatarandtitle h1 {
@@ -75,105 +74,102 @@ hr {
 }
 
 .header .avatarandtitle {
-    float: left;
-    margin: 1em;
+  float: left;
+  margin: 1em;
 }
 
 .header .nav {
-    font-family: "Fira Sans";
-    font-weight: 600;
-    float: right;
-    margin: 2em;
-    margin-top: 1.8em;
+  font-family: "Fira Sans";
+  font-weight: 600;
+  float: right;
+  margin: 2em;
+  margin-top: 1.8em;
 }
 
 .header .nav .nav-page, .header .nav .nav-separator {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header .nav .nav-separator {
-    padding: 0 .5em;
+  padding: 0 .5em;
 }
 
 .header .avatarandtitle h1 {
-    display: inline-block;
-    padding-left: .5em;
+  display: inline-block;
+  padding-left: .5em;
 }
 
 .header .avatarandtitle img {
-    vertical-align: middle;
-    border-radius: 50px;
-    width: 50px;
+  vertical-align: middle;
+  border-radius: 50px;
+  width: 50px;
 }
 
 .container {
-    font-size: 1.15em;
-    text-align: justify;
-    line-height: 1.5em;
-    max-width: 45em;
-    margin: 0 auto;
-    -webkit-animation: fadeIn .5s ease-out;
-    -moz-animation: fadeIn .5s ease-out;
-    animation: fadeIn .5s ease-out;
+  font-size: 1.15em;
+  text-align: justify;
+  line-height: 1.5em;
+  max-width: 45em;
+  margin: 0 auto;
+  animation: fadeIn .5s ease-out;
 }
 
 .container .post-title {
-    text-align: center;
-    font-family: "Fira Sans";
-    font-size: 1.3em;
-    font-weight: bold;
+  text-align: center;
+  font-family: "Fira Sans";
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .container .footer {
-    font-family: "Fira Sans";
-    color: #666;
-    padding: 1em 0;
-    text-align: center;
+  font-family: "Fira Sans";
+  color: #666;
+  padding: 1em 0;
+  text-align: center;
 }
 
 .container .footer .contact {
-    display: inline-block;
-    padding: .5em 1em;
+  display: inline-block;
+  padding: .5em 1em;
 }
 
 .container .footer hr {
-    width: 33%;
+  width: 33%;
 }
 
 .container .footer .contact i {
-    color: #666;
-    transition: color 250ms;
+  color: #666;
+  transition: color 250ms;
 }
 
 .container .footer .contact i:hover {
-    color: #8085C1;
+  color: #8085C1;
 }
 
-/*****************************************************************************/
 /*
-/* Blog home
-/*
-/*****************************************************************************/
+ * Blog home
+ */
+
 ul.posts {
-    font-family: "Fira Sans";
-    list-style-type: none;
-    padding: 0 2.5em;
-	text-align: center;
+  font-family: "Fira Sans";
+  list-style-type: none;
+  padding: 0 2.5em;
+  text-align: center;
 }
 
 ul.posts li {
-    line-height: 1.75em;
+  line-height: 1.75em;
 }
 
 ul.posts li a {
-    font-family: "Fira Sans";
+  font-family: "Fira Sans";
 }
 
 ul.posts li.excerpt {
-    font-family: "Fira Sans";
-    font-size: .9em;
-    color: #aaa;
+  font-family: "Fira Sans";
+  font-size: .9em;
+  color: #aaa;
 }
 
 ul.posts .post-date {
@@ -181,125 +177,114 @@ ul.posts .post-date {
   font-weight: 600;
 }
 
-@-webkit-keyframes fadeIn {
-    from {opacity: 0; transform: translateX(-5%);}
-    to {opacity: 1; transform: translateY(0);}
-}
-@-moz-keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-5%);}
-    to {opacity: 1; transform: translateY(0);}
-}
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-5%);}
-    to {opacity: 1; transform: translateY(0);}
+  from {opacity: 0; transform: translateY(-5%);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
-/*****************************************************************************/
 /*
-/* Content (page & posts)
-/*
-/*****************************************************************************/
+ * Content (page & posts)
+ */
 
-/* standard */
+// standard
 .post ul, .post ol {
-    margin-left: 1.35em;
+  margin-left: 1.35em;
 }
 
 .post, .page {
-    padding: 0 2.5em;
+  padding: 0 2.5em;
 }
 
 .page-title {
-    text-align: center;
+  text-align: center;
 }
 
 .page abbr {
-    cursor: help;
-    border-bottom: 1px dashed;
+  cursor: help;
+  border-bottom: 1px dashed;
 }
 
 .page {
   padding: 0 7.5em;
 }
 
-/* code highlighting & terminal */
+// code highlighting & terminal
 .post pre {
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 .post .highlight, .post .terminal {
-    margin: 0 1em;
-    padding: .5em;
-    border-left: 5px solid #e0e0e0;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+  margin: 0 1em;
+  padding: .5em;
+  border-left: 5px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .post .terminal {
-    background-color: #333;
-    border-left: 5px solid #666;
-    color: #fff;
+  background-color: #333;
+  border-left: 5px solid #666;
+  color: #fff;
 }
 
 .post .terminal:before {
-    content: "$ ";
-    color: #fea63c;
-    font-weight: bold;
+  content: "$ ";
+  color: #fea63c;
+  font-weight: bold;
 }
 
-/****************************************************************************/
 /*
-/* Responsive layout
-/*
-/****************************************************************************/
+ * Responsive layout
+ */
+
 @media screen and (max-width: 767px) {
 
-    .header {
-        text-align: center;
-        height: 3em;
-    }
+  .header {
+    text-align: center;
+    height: 3em;
+  }
 
-    .container .page-title {
-        padding-top: 3em;
-        margin-top: 2em;
-    }
+  .container .page-title {
+    padding-top: 3em;
+    margin-top: 2em;
+  }
 
-    .container .posts {
-        text-align: center;
-    }
+  .container .posts {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 650px) {
 
-    .post, .page {
-        padding: 0 1.5em;
-    }
+  .post, .page {
+    padding: 0 1.5em;
+  }
 
-    .header .avatarandtitle {
-        float: none;
-    }
+  .header .avatarandtitle {
+    float: none;
+  }
 
-    .header .nav {
-        float: none;
-    }
+  .header .nav {
+    float: none;
+  }
 
-    .container .posts span {
-        display: none;
-    }
+  .container .posts span {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px) {
 
-    body {
-        font-size: 0.9em;
-    }
+  body {
+    font-size: 0.9em;
+  }
 
-    .header .nav {
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .header .nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-    .container .post {
-        padding: 0 0.5em;
-    }
+  .container .post {
+    padding: 0 0.5em;
+  }
 }
