@@ -7,7 +7,7 @@ html, body { min-height: 100%; }
 body {
   color: #4b4b4b;
   background-color: #fff;
-  font: 15px "Fira Sans", Arial, sans-serif;
+  font: 100% "Fira Sans", Arial, sans-serif;
   margin: 0 1em;
 }
 
