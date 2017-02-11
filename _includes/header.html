@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ site.name }}">
     <title>{{ page.title }} — {{ site.title }}</title>
-    <link href="{{ site.url }}/assets/css/style.css" rel="stylesheet" media="screen">
-    {% if page.custom_css %}
-      {% for stylesheet in page.custom_css %}
-        <link href="{{ site.url }}/assets/css/{{ stylesheet }}.css" rel="stylesheet" media="screen">
-      {% endfor %}
-    {% endif %}
-    <link href="{{ site.url }}/assets/css/fonts.css" rel="stylesheet" media="screen">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,500,500i|Roboto+Slab:400,700" rel="stylesheet" media="screen">
   </head>
   <body>
     <main>
