@@ -1,13 +1,17 @@
 # Site settings
-name             : Nicolas Gaulard-Querol
-title            : Nicolas Gaulard-Querol
-email            : nicolas.gquerol@gmail.com
-description      : "ngquerol's personal website"
-baseurl          : ""
-twitter_username : ngquerol
-github_username  : ngquerol
+title: Nicolas Gaulard-Querol
+description: "Nicolas Gaulard-Querol's personal website."
+name: Nicolas Gaulard-Querol
+email: nicolas.gquerol@gmail.com
+twitter_username: ngquerol
+github_username: ngquerol
+baseurl: ""
 
 # Build settings
-timezone    : Europe/Paris
-markdown    : kramdown
-permalink   : /blog/:year/:month/:day/:title
+timezone: Europe/Paris
+permalink: /blog/:year/:month/:day/:title
+markdown: kramdown
+kramdown:
+  auto_ids: false
+  input: GFM
+  syntax_highlighter: rouge

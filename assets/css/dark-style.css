@@ -1,0 +1,51 @@
+body {
+  background-color: #202020;
+  color: #bbb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1, h2 {
+  color: #aaa;
+}
+
+h3, h4, h5, h6 {
+  color: #808080;
+}
+
+a {
+  color: #e0e0e0;
+}
+
+a:hover,
+a > [class^="icon-"]:hover,
+a > [class*=" icon-"]:hover {
+  color: #fff;
+}
+
+a > [class^="icon-"],
+a > [class*=" icon-"] {
+  color: #aaa;
+}
+
+hr {
+  background-color: #606060;
+}
+
+blockquote {
+  border-left-color: #808080;
+  border-width: 1px;
+}
+
+article a, section a {
+  border-bottom: 1px dashed;
+}
+
+.highlight,
+code.highlighter-rouge {
+  background-color: #282828;
+  border: 1px solid #484848;
+  color: #e0e0e0;
+}

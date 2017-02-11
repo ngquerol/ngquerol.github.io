@@ -3,28 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} — {{ site.name }}</title>
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css" media="screen">
+    <meta name="author" content="{{ site.name }}">
+    <title>{{ page.title }} — {{ site.title }}</title>
+    <link href="{{ site.url }}/assets/css/style.css" rel="stylesheet" media="screen">
     {% if page.custom_css %}
       {% for stylesheet in page.custom_css %}
-        <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ stylesheet }}.css" media="screen">
+        <link href="{{ site.url }}/assets/css/{{ stylesheet }}.css" rel="stylesheet" media="screen">
       {% endfor %}
     {% endif %}
+    <link href="{{ site.url }}/assets/css/fonts.css" rel="stylesheet" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,500,500i|Roboto+Slab:400,700" rel="stylesheet" media="screen">
   </head>
   <body>
-
-    <div class="header">
-      <div class="avatarandtitle">
-        <img src="{{ site.url }}/assets/img/avatar.jpg" />
-        <h1>{{ site.name }}</h1>
-      </div>
-      <div class="nav">
-        <div class="nav-page"><i class="icon-home"></i> <a href="/">About</a></div>
-        <div class="nav-separator">-</div>
-        <div class="nav-page"><i class="icon-cogs"></i> <a href="{{ site.url }}/projects">Projects</a></div>
-        <div class="nav-separator">-</div>
-        <div class="nav-page"><i class="icon-books"></i> <a href="{{ site.url }}/blog">Blog</a></div>
-      </div>
-    </div>
-
-    <div class="container">
+    <main>
+      <header>
+        <div class="avatarandtitle">
+          <img src="{{ site.url }}/assets/img/avatar.jpg" />
+          <h1>{{ site.name }}</h1>
+        </div>
+        <nav>
+          <div class="nav-page">
+            <h2>
+              <span class="icon-info"></span>
+              <a href="{{ site.url }}">About</a>
+            </h2>
+          </div>
+          <div class="nav-page">
+            <h2>
+              <span class="icon-code"></span>
+              <a href="{{ site.url }}/projects">Projects</a>
+            </h2>
+          </div>
+          <div class="nav-page">
+            <h2>
+              <span class="icon-docs"></span>
+              <a href="{{ site.url }}/blog">Blog</a>
+            </h2>
+          </div>
+        </nav>
+      </header>

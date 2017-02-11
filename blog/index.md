@@ -1,12 +1,22 @@
 ---
-layout: default
-title: Blog
+layout: page
+title: Blog Posts
 ---
 
-<h2 class="page-title">Blog Posts</h2>
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span class="post-date">{{ post.date | date: '%B %d, %Y' }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    <li class="excerpt">&#12317;{{ post.excerpt }}&#12318;</li>
+    <li>
+      <h3 class="post-title">
+        <small class="post-date">
+          <time>{{ post.date | date: '%B %d, %Y' }}</time>
+        </small>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h3>
+      <p class="post-excerpt">
+        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+      </p>
+    </li>
   {% endfor %}
 </ul>

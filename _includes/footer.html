@@ -1,24 +1,79 @@
 
-    <div class="footer">
-      <hr>
-      <div class="contact">
-        <a href="mailto:nicolas.gquerol@gmail.com">
-          <i class="icon-envelop"></i>
-        </a>
-      </div>
-      <div class="contact">
-        <a href="https://github.com/ngquerol" target="_blank">
-          <i class="icon-github2"></i>
-        </a>
-      </div>
-        <div class="contact">
-          <a href="https://twitter.com/NGQuerol" target="_blank">
-            <i class="icon-twitter"></i>
+      <footer>
+        <hr>
+        <address>
+          <a href="mailto:{{ site.email }}">
+            <span class="icon-mail"></span>
           </a>
-        </div>
-      </div>
-    </div>
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/fonts.css">
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/icons.css">
+        </address>
+        <address>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank">
+            <span class="icon-github"></span>
+          </a>
+        </address>
+        <address>
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+            <span class="icon-twitter"></span>
+          </a>
+        </address>
+      </footer>
+    </main>
+    <script type="text/javascript">
+     function disableDarkTheme() {
+       [
+         document.getElementById("dark-syntax"),
+         document.getElementById("dark-style")
+       ].forEach(function(stylesheet) {
+         if (stylesheet) document.body.removeChild(stylesheet)
+       })
+     }
+
+     function enableDarkTheme() {
+       var themeStylesheet = document.createElement("link")
+       themeStylesheet.id = "dark-style"
+       themeStylesheet.rel = "stylesheet"
+       themeStylesheet.href = "{{ site.url }}/assets/css/dark-style.css"
+       themeStylesheet.media = "screen"
+
+       var syntaxStylesheet = document.createElement("link")
+       syntaxStylesheet.id = "dark-syntax"
+       syntaxStylesheet.rel = "stylesheet"
+       syntaxStylesheet.href = "{{ site.url }}/assets/css/dark-syntax.css"
+       syntaxStylesheet.media = "screen"
+
+       var fragment = document.createDocumentFragment()
+       fragment.appendChild(themeStylesheet)
+       fragment.appendChild(syntaxStylesheet)
+
+       document.body.appendChild(fragment)
+     }
+
+     function toggleDarkTheme() {
+       if (JSON.parse(sessionStorage["dark-style"])) {
+         enableDarkTheme()
+       } else {
+         disableDarkTheme()
+       }
+     }
+
+     var avatar = document.querySelector("header .avatarandtitle img")
+     avatar.title = "Toggle Dark Theme"
+     avatar.style.cursor = "pointer"
+
+     avatar.addEventListener("click", function() {
+       var oldValue = JSON.parse(sessionStorage["dark-style"])
+       sessionStorage["dark-style"] = !oldValue
+
+       toggleDarkTheme()
+     })
+
+     document.addEventListener("DOMContentLoaded", function() {
+       if (!sessionStorage["dark-style"]) {
+         sessionStorage["dark-style"] = false
+       }
+
+       toggleDarkTheme()
+     })
+    </script>
   </body>
 </html>
