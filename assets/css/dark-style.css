@@ -19,15 +19,15 @@ a {
   color: #e0e0e0;
 }
 
-a:hover,
-a > [class^="icon-"]:hover,
-a > [class*=" icon-"]:hover {
-  color: #fff;
+a > span[class^="icon-"],
+a > span[class*=" icon-"] {
+  color: #aaa;
 }
 
-a > [class^="icon-"],
-a > [class*=" icon-"] {
-  color: #aaa;
+a:hover,
+a > span[class^="icon-"]:hover,
+a > span[class*=" icon-"]:hover {
+  color: #fff;
 }
 
 hr {
@@ -41,6 +41,10 @@ blockquote {
 
 article a, section a {
   border-bottom: 1px dashed;
+}
+
+article h2 {
+  border-color: #484848;
 }
 
 .highlight,
