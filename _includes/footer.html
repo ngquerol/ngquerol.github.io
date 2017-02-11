@@ -24,64 +24,11 @@
         <link href="{{ site.url }}/assets/css/{{ stylesheet }}.css" rel="stylesheet" media="screen">
       {% endfor %}
     {% endif %}
-    <link href="{{ site.url }}/assets/css/fonts.css" rel="stylesheet" media="screen">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,500,500i|Roboto+Slab:400,700" rel="stylesheet" media="screen">
+    <noscript>
+      <link rel="stylesheet" href="{{ site.url }}/assets/css/fonts.css">
+    </noscript>
     <script type="text/javascript">
-     function disableDarkTheme() {
-       [
-         document.getElementById("dark-syntax"),
-         document.getElementById("dark-style")
-       ].forEach(function(stylesheet) {
-         if (stylesheet) document.body.removeChild(stylesheet)
-       })
-     }
-
-     function enableDarkTheme() {
-       var themeStylesheet = document.createElement("link")
-       themeStylesheet.id = "dark-style"
-       themeStylesheet.rel = "stylesheet"
-       themeStylesheet.href = "{{ site.url }}/assets/css/dark-style.css"
-       themeStylesheet.media = "screen"
-
-       var syntaxStylesheet = document.createElement("link")
-       syntaxStylesheet.id = "dark-syntax"
-       syntaxStylesheet.rel = "stylesheet"
-       syntaxStylesheet.href = "{{ site.url }}/assets/css/dark-syntax.css"
-       syntaxStylesheet.media = "screen"
-
-       var fragment = document.createDocumentFragment()
-       fragment.appendChild(themeStylesheet)
-       fragment.appendChild(syntaxStylesheet)
-
-       document.body.appendChild(fragment)
-     }
-
-     function toggleDarkTheme() {
-       if (JSON.parse(sessionStorage["dark-style"])) {
-         enableDarkTheme()
-       } else {
-         disableDarkTheme()
-       }
-     }
-
-     var avatar = document.querySelector("header .avatarandtitle img")
-     avatar.title = "Toggle Dark Theme"
-     avatar.style.cursor = "pointer"
-
-     avatar.addEventListener("click", function() {
-       var oldValue = JSON.parse(sessionStorage["dark-style"])
-       sessionStorage["dark-style"] = !oldValue
-
-       toggleDarkTheme()
-     })
-
-     document.addEventListener("DOMContentLoaded", function() {
-       if (!sessionStorage["dark-style"]) {
-         sessionStorage["dark-style"] = false
-       }
-
-       toggleDarkTheme()
-     })
+     {% include theme.js %}
     </script>
   </body>
 </html>

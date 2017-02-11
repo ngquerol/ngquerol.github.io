@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ site.name }}">
     <title>{{ page.title }} — {{ site.title }}</title>
+  <style>
+   {% include base.css %}
+  </style>
   </head>
+  <script type="text/javascript">
+   {% include webfonts.js %}
+  </script>
   <body>
     <main>
       <header>
         <div class="avatarandtitle">
-          <img src="{{ site.url }}/assets/img/avatar.jpg" />
+          <img id="theme-toggle" src="{{ site.url }}/assets/img/avatar.jpg" />
           <h1>{{ site.name }}</h1>
         </div>
         <nav>
