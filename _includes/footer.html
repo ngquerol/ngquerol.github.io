@@ -18,6 +18,14 @@
         </address>
       </footer>
     </main>
+    {% if page.custom_css %}
+      {% for stylesheet in page.custom_css %}
+        <link href="{{ site.url }}/assets/css/{{ stylesheet }}.css" rel="stylesheet" media="all">
+      {% endfor %}
+    {% endif %}
+    <noscript>
+      <link rel="stylesheet" href="{{ site.url }}/assets/css/fonts.css" media="all">
+    </noscript>
     <script type="text/javascript">
      {% include theme.js %}
     </script>

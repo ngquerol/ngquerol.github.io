@@ -6,22 +6,13 @@
     <meta name="author" content="{{ site.name }}">
     <title>{{ page.title }} — {{ site.title }}</title>
   <style>
-   {% include base.css %}
+   {% include style.css %}
   </style>
   </head>
   <script type="text/javascript">
    {% include webfonts.js %}
   </script>
   <body>
-    <link href="{{ site.url }}/assets/css/style.css" rel="stylesheet">
-    {% if page.custom_css %}
-      {% for stylesheet in page.custom_css %}
-        <link href="{{ site.url }}/assets/css/{{ stylesheet }}.css" rel="stylesheet" media="screen">
-      {% endfor %}
-    {% endif %}
-    <noscript>
-      <link rel="stylesheet" href="{{ site.url }}/assets/css/fonts.css">
-    </noscript>
     <main>
       <header>
         <div class="avatarandtitle">
