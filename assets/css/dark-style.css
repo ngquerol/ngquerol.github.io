@@ -53,3 +53,11 @@ code.highlighter-rouge {
   border: 1px solid #484848;
   color: #e0e0e0;
 }
+
+kbd {
+  background-color: #282828;
+  border: 1px solid #000;
+  box-shadow: 0 1px 0 #484848, 0 0 0 2px #484848 inset;
+  color: #ccc;
+  text-shadow: 0 1px 0 #606060;
+}
