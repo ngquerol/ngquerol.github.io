@@ -21,21 +21,25 @@ h3,h4,h5,h6 {
 
 h1 {
   font-size: 1.75rem;
-  margin: 2rem 0;
+  line-height: 1.75rem;
+  margin: 2.5rem 0 1.5rem 0;
 }
 
 h2 {
   font-size: 1.25rem;
-  margin: 1.5rem 0;
+  line-height: 1.25rem;
+  margin: 2rem 0 1rem 0;
 }
 
 h3 {
   font-size: 1.15rem;
-  margin: 1.25rem 0;
+  line-height: 1.15rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 h4,h5,h6 {
   font-size: 1rem;
+  line-height: 1rem;
 }
 
 pre,code {
@@ -194,6 +198,21 @@ code.highlighter-rouge {
   font-weight: 400;
   margin: 0 .25rem;
   padding: .125rem .25rem;
+}
+
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: Menlo, Consolas, Monospace;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0 .25rem;
+  padding: .15rem .3rem;
+  text-shadow: 0 1px 0 #fff;
 }
 
 .posts {
