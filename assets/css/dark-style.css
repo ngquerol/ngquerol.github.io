@@ -56,8 +56,8 @@ code.highlighter-rouge {
 
 kbd {
   background-color: #282828;
-  border: 1px solid #000;
-  box-shadow: 0 1px 0 #484848, 0 0 0 2px #484848 inset;
+  border: 1px solid #484848;
+  box-shadow: 0 1px 0 #484848, 0 0 0 2px #202020 inset;
   color: #ccc;
-  text-shadow: 0 1px 0 #606060;
+  text-shadow: 0 1px 0 #484848;
 }
