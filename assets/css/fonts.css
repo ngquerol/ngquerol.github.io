@@ -77,5 +77,5 @@
 .icon-projects:before { content: '\e802'; }
 .icon-blog:before { content: '\e803'; }
 .icon-github:before { content: '\f300'; }
-.icon-twitter:before { content: '\f309'; }
-.icon-linkedin:before { content: '\f318'; }
+.icon-twttr:before { content: '\f309'; }
+.icon-lnkdn:before { content: '\f318'; }
