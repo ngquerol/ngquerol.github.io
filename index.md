@@ -3,8 +3,7 @@ layout: page
 title: Hey there !
 ---
 
-I am a 24 year old French student, majoring in Business Informatics (i.e. <abbr title="Méthodes Informatiques Appliquées à la Gestion des
-Entreprises">MIAGE</abbr> in French universities).
+I am a 25 year old French developer.
 
 Here's a short and non exhaustive list of my interests:
 
