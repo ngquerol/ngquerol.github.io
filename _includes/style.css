@@ -5,11 +5,10 @@ html,body {
 body {
   background: #fff;
   color: #4b4b4b;
-  font: 100% "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 100% "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1;
   margin: 0;
   text-rendering: optimizeLegibility;
-  transition: background-color 300ms ease-out;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -200,7 +199,7 @@ section abbr {
   border-bottom: 1px dashed;
 }
 
-.highlight {
+pre.highlight {
   background: #f8f8f8;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
@@ -278,7 +277,7 @@ kbd {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 599px) {
   header nav .nav-page:after {
     padding: .25rem;
   }

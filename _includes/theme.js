@@ -34,16 +34,17 @@ function applyTheme(isDarkTheme) {
   isDarkTheme ? enableDarkTheme() : disableDarkTheme();
 }
 
-var toggle = document.querySelector("#theme-toggle");
-toggle.title = "Toggle Dark Theme";
-toggle.style.cursor = "pointer";
-toggle.addEventListener("click", function () {
-  var applyDarkTheme = !JSON.parse(sessionStorage["dark-style"]);
-  applyTheme(applyDarkTheme);
-  sessionStorage["dark-style"] = applyDarkTheme;
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   !sessionStorage["dark-style"] && (sessionStorage["dark-style"] = false)
   applyTheme(JSON.parse(sessionStorage["dark-style"]));
+
+  var toggle = document.querySelector("#theme-toggle");
+  toggle.title = "Toggle Dark Theme";
+  toggle.style.cursor = "pointer";
+
+  toggle.addEventListener("click", function () {
+    var applyDarkTheme = !JSON.parse(sessionStorage["dark-style"]);
+    applyTheme(applyDarkTheme);
+    sessionStorage["dark-style"] = applyDarkTheme;
+  });
 });
