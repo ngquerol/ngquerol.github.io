@@ -1,18 +1,33 @@
 # Site settings
-title: Nicolas Gaulard-Querol
+title: ngquerol
+author: Nicolas Gaulard-Querol
 description: "Nicolas Gaulard-Querol's personal website."
-name: Nicolas Gaulard-Querol
 email: nicolas.gquerol@gmail.com
+baseurl: ""
+timezone: Europe/Paris
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Build settings
+markdown: kramdown
+
+# Output
+permalink: /blog/:year/:month/:day/:title
+
+# Social media
 twitter_username: ngquerol
 github_username: ngquerol
 linkedin_username: nicolasgaulardquerol
-baseurl: ""
 
-# Build settings
-timezone: Europe/Paris
-permalink: /blog/:year/:month/:day/:title
-markdown: kramdown
+# Markdown settings
 kramdown:
   auto_ids: false
+  enable_coderay: false
+  entity_output: as_char
   input: GFM
-  syntax_highlighter: rouge
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true

@@ -1,35 +1,23 @@
-
-      <footer>
-        <hr>
-        <address>
-          <a title="Email" href="mailto:{{ site.email }}">
-            <span class="icon-mail"></span>
-          </a>
-        </address>
-        <address>
-          <a title="LinkedIn"  href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
-            <span class="icon-lnkdn"></span>
-          </a>
-        </address>
-        <address>
-          <a title="Github"  href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
-            <span class="icon-github"></span>
-          </a>
-        </address>
-        <address>
-          <a title="Twitter" href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">
-            <span class="icon-twttr"></span>
-          </a>
-        </address>
-      </footer>
     </main>
-    {% if page.custom_css %}
-      {% for stylesheet in page.custom_css %}
-        <link href="{{ site.url }}/assets/css/{{ stylesheet }}.css" rel="stylesheet" media="all">
-      {% endfor %}
-    {% endif %}
+    <footer class="site-footer">
+      <hr>
+      <p>
+        &copy; {{ site.author }} - Powered by <a href="https://jekyllrb.com">Jekyll</a> - Subscribe via <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+      </p>
+    </footer>
+    <script>
+     {% include theme-toggle.js %}
+    </script>
     <noscript>
-      <link rel="stylesheet" href="{{ site.url }}/assets/css/fonts.css" media="all">
+      <style>
+       #theme-toggle { visibility: hidden; }
+
+       @media (prefers-color-scheme: dark) {
+         :root {
+           {% include dark-theme-vars.css %}
+         }
+       }
+      </style>
     </noscript>
   </body>
 </html>

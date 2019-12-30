@@ -5,13 +5,23 @@ title: Hey there !
 
 I am a 25 year old French developer.
 
-Here's a short and non exhaustive list of my interests:
+You can check my curriculum vitæ [here
+(fr)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf), and contact me via the
+following links :
 
-- Open Source & Free Software
-- UNIX (BSDs, Linux, macOS)
-- Programming (C, Java, Swift, Lisp/Scheme, …)
-- Music (bass, guitar, …)
-- Cinema
-- Literature, especially science-fiction
-
-You can check my curriculum vitæ [here (fr)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf).
+<div style="text-align: center">
+  <span class="icon-mail"></span>
+  <a title="Email" href="mailto:{{ site.email }}">Email</a>
+  &dash;
+  <span class="icon-lnkdn"></span>
+  <a href="https://www.linkedin.com/in/{{site.linkedin_username }}"
+     target="_blank" ref="noreferrer" rel="noopener">LinkedIn</a>
+  &dash;
+  <span class="icon-ghub"></span>
+  <a href="https://github.com/{{ site.github_username }}"
+     target="_blank" ref="noreferrer" rel="noopener">Github</a>
+  &dash;
+  <span class="icon-twttr"></span>
+  <a href="https://twitter.com/{{ site.twitter_username }}"
+   target="_blank" ref="noreferrer" rel="noopener">Twitter</a>
+</div>

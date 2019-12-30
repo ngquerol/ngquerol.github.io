@@ -3,46 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ site.name }}">
-    <title>{{ page.title }} — {{ site.title }}</title>
+
+    {% assign title = page.title | append: ' — ' | append: site.title | escape %}
+    {% assign canonical = page.url | replace:'index.html','' | absolute_url %}
+    {% assign description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}
+
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:image" content="https://og-image.now.sh/{{ title | uri_escape }}.png" />
+    <meta property="og:description" content="{{ description }}">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "/feed.xml" | relative_url }}">
+
+    <title>{{ title }}</title>
+
     <style>
-     {% include style.css %}
+     {% include global.css %}
     </style>
-    <script type="text/javascript">
-     {% include webfonts.js %}
-    </script>
-    <script type="text/javascript">
-     {% include theme.js %}
-    </script>
   </head>
-    <body>
-    <main>
-      <header>
-        <div class="avatarandtitle">
-          <img src="{{ site.url }}/assets/img/avatar.jpg" alt="Avatar" />
-          <h1>{{ site.name }}</h1>
-          <h2>
-            <span id="theme-toggle" class="icon-dark" ></span>
-          </h2>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="{{ "/" | relative_url }}">
+        {{ site.title | escape }}
+      </a>
+      <span id="theme-toggle" class="icon-light" title="Toggle theme"></span>
+      <nav>
+        <div class="nav-page">
+          <span class="icon-about"></span>
+          <a href="{{ site.url }}">About</a>
         </div>
-        <nav>
-          <div class="nav-page">
-            <h2>
-              <span class="icon-about"></span>
-              <a href="{{ site.url }}">About</a>
-            </h2>
-          </div>
-          <div class="nav-page">
-            <h2>
-              <span class="icon-projects"></span>
-              <a href="{{ site.url }}/projects">Projects</a>
-            </h2>
-          </div>
-          <div class="nav-page">
-            <h2>
-              <span class="icon-blog"></span>
-              <a href="{{ site.url }}/blog">Blog</a>
-            </h2>
-          </div>
-        </nav>
-      </header>
+        <div class="nav-page">
+          <span class="icon-projects"></span>
+          <a href="{{ "projects" | relative_url }}">Projects</a>
+        </div>
+        <div class="nav-page">
+          <span class="icon-blog"></span>
+          <a href="{{ "posts" | relative_url }}">Posts</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-content">
