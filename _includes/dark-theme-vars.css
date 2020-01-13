@@ -1,13 +1,14 @@
---bg-color: #303030;
---bg-color-alt: #808080;
+--background-color: #222222;
 
---text-color: #bbb;
---link-color: #e0e0e0;
---link-hover-color: #fff;
---icon-color: #fbb250;
---separator-color: #606060;
+--code-background-color: #222222;
+--code-text-color: #f7f7f7;
 
---kbd-color: #bbb;
---kbd-bg-color: #303030;
---kbd-border-color: #909090;
---kbd-text-shadow-color: #505050;
+--border-color: #555555;
+
+--text-default-color: #aaaaaa;
+--text-faded-color: #666666;
+
+--accent-color: #fbb250;
+
+--kbd-border-color: #999999;
+--kbd-text-shadow-color: #444444;

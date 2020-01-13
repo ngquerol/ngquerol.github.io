@@ -1,8 +1,13 @@
+# Ruby
 .bundle
+Gemfile*
+vendor
+
+# Jekyll
 .jekyll-metadata
 .jekyll-cache/
 .sass-cache/
-.tern-project
-Gemfile*
 _site/
-vendor
+
+# Misc.
+.tern-project

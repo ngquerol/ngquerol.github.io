@@ -6,7 +6,7 @@ title: Hey there !
 I am a 25 year old French developer.
 
 You can check my curriculum vitæ [here
-(fr)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf), and contact me via the
+(🇫🇷)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf), and contact me via the
 following links :
 
 <div style="text-align: center">

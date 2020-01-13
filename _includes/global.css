@@ -1,4 +1,4 @@
-/* Variables */
+/* Theme variables ***********************************************************/
 
 :root {
   {% include light-theme-vars.css %}
@@ -8,57 +8,105 @@
   {% include dark-theme-vars.css %}
 }
 
-/* Elements */
+/* Elements ******************************************************************/
 
 body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: "Bitter", -apple-system, BlinkMacSystemFont,
-               "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-               "Fira Sans", "Droid Sans", "Helvetica Neue",
-               sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-default-color);
+  font-family: "Zilla Slab", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
   margin: 1rem auto;
-  max-width: 45rem;
-  transition: background 200ms ease-in;
+  max-width: 37.5rem;
+  transition: background-color 200ms ease-in;
 }
 
-p {
-  margin: 0 0 1rem 0;
+h1, h2, h3, h4, h5 {
+  letter-spacing: .05rem;
+  margin: 2.5rem 0 1rem 0;
+}
+
+p, ul {
+  line-height: 1.5rem;
+  letter-spacing: .025rem;
+  word-spacing: .05rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul ul {
+  margin: 1rem 0;
+}
+
+article > ul,
+section > ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul li:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+ul li:before {
+  content: "\21a0\a0";
+  color: var(--text-faded-color);
 }
 
 a {
-  color: var(--link-color);
   text-decoration: none;
-  transition: color 300ms;
+  color: currentColor;
+  border-bottom: 1px dashed currentColor;
+  font-weight: 500;
+  transition: color 200ms;
 }
 
-a:hover {
-  color: var(--link-hover-color);
+h1, a:hover {
+  color: var(--accent-color);
 }
 
 img {
   max-width: 100%;
-}
-
-.page-content a {
-  border-bottom: 1px dashed;
-}
-
-.page-content a:hover, a > span[class^="icon-"]:hover {
-  border-bottom: 1px solid;
-  text-decoration: none;
+  filter: drop-shadow(0 2px 4px var(--border-color));
 }
 
 blockquote {
-  border-left: 2px solid var(--separator-color);
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
-  padding-left: .5rem;
+  position: relative;
+  margin: 3rem auto 2rem auto;
+  max-width: 75%;
+}
+
+blockquote p {
+  font-style: italic;
+  display: inline;
+}
+
+blockquote:before, blockquote:after, blockquote cite {
+  color: var(--accent-color);
+}
+
+blockquote:before, blockquote:after {
+  position: absolute;
+  font-size: 3em;
+}
+
+blockquote:before {
+  content: open-quote;
+  margin-left: -1em;
+  margin-top: -.5em;
+}
+
+blockquote:after {
+  content: close-quote;
+  bottom: 0;
+  right: 0;
+  margin-right: -.8em;
+  margin-bottom: -.8em;
 }
 
 blockquote cite {
-  color: var(--separator-color);
-  white-space: nowrap;
+  display: block;
 }
 
 blockquote cite:before {
@@ -67,93 +115,78 @@ blockquote cite:before {
 }
 
 hr {
-  background: var(--separator-color);
+  background-color: var(--border-color);
   border: none;
   height: 1px;
-  overflow: visible;
+  width: 100%;
+  margin: 1rem 33.3%;
 }
+
+/* Header ********************************************************************/
 
 .site-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.site-header .site-title {
+  font-weight: 500;
 }
 
 .site-header nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 #theme-toggle {
   cursor: pointer;
   margin-left: .5em;
-  padding-top: .2rem;
+  line-height: 1.5rem;
 }
 
 .site-header nav {
   margin-left: auto;
-  justify-content: space-around;
 }
 
-.site-header nav .nav-page {
+.site-header nav .nav-page:not(:first-of-type) {
   margin-left: 1.5rem;
 }
+
+/* Footer ********************************************************************/
 
 .site-footer {
   font-size: .9rem;
   margin: 1rem 0;
+  flex-wrap: wrap;
   text-align: center;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
-}
-
-.site-footer hr {
-  width: 100%;
-  margin-left: 33.3%;
-  margin-right: 33.3%;
-  margin-bottom: 2rem;
 }
 
 .site-footer p {
   margin: 0;
 }
 
-.page-content {
-  line-height: 1.5rem;
-  text-align: left;
-  display: flex;
-  justify-content: center;
+/* Contents ******************************************************************/
+
+.faded {
+  color: var(--text-faded-color);
 }
 
-.page-title, .post-header {
+.post-header {
   margin-bottom: 2rem;
 }
 
-section,article {
-  flex-basis: 100%;
+.post-header .post-title {
+  margin: 0;
 }
 
-kbd {
-  background-color: var(--kbd-bg-color);
-  border: 1px solid var(--kbd-border-color);
-  border-radius: 3px;
-  box-shadow: 0 1px 0 var(--kbd-border-color),0 0 0 2px var(--kbd-text-shadow-color) inset;
-  color: var(--kbd-color);
-  display: inline-block;
-  font-family: Inconsolata, Menlo, Consolas, Monospace;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  margin: 0 .25rem;
-  padding: .15rem .3rem;
-  text-shadow: 0 1px 0 var(--kbd-text-shadow-color);
-}
-
-article .post-date {
-  color: var(--bg-color-alt);
+.post-header .post-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
 }
 
 .posts {
@@ -161,123 +194,198 @@ article .post-date {
   padding-left: 0;
 }
 
-.posts > li {
-  margin: 2rem 0;
+.posts li:not(:last-of-type) {
+  margin-bottom: 2.5rem;
+}
+
+.posts li:before {
+  content: "\21a0";
 }
 
 .posts .post-title {
-  margin: 0;
-}
-
-.posts .post-date,
-.posts .post-tags {
-  font-size: .9rem;
-  color: var(--bg-color-alt);
-}
-
-.posts .post-date:after {
-  content: "\00bb";
+  margin: .5rem 0 0 0;
 }
 
 .posts .post-excerpt {
   margin: .5rem 0;
 }
 
-@media screen and (max-width: 767px) {
-  .page-content {
-    display: block;
-    margin: 1rem;
+/* Keyboard keys *************************************************************/
+
+kbd {
+  background-color: var(--background-color);
+  border: 1px solid var(--kbd-border-color);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--kbd-border-color),0 0 0 2px var(--kbd-text-shadow-color) inset;
+  color: var(--text-default-color);
+  display: inline-block;
+  font-family: Menlo, Courier, Consolas, Monospace;
+  line-height: 1rem;
+  text-align: center;
+  margin: 0 .3rem;
+  padding: .25rem .5rem;
+}
+
+/* Code blocks & highlighting ************************************************/
+
+pre, code {
+  font-family: Menlo, Courier, Consolas, monospace;
+  font-size: .9rem;
+  line-height: 1.25rem;
+  overflow: auto;
+  white-space: pre;
+}
+
+pre.highlight, code.highlighter-rouge {
+  color: var(--code-text-color);
+  background-color: var(--code-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+}
+
+code.highlighter-rouge {
+  padding: .1rem .2rem;
+}
+
+pre.lineno {
+  color: var(--border-color);
+  margin: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.rouge-gutter {
+  padding: 0 .5rem;
+}
+
+.rouge-code pre {
+  margin: 0;
+  padding: .5rem 0;
+}
+
+{% include syntax.css %}
+
+/* Media queries *************************************************************/
+
+@media screen and (max-width: 640px) {
+  .site-header {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
-  .site-header {
-    margin: 0 1rem;
+  .page-content {
+    margin: 1rem;
   }
 }
 
 @media screen and (max-width: 599px) {
+
   .page-title {
     text-align: center;
   }
 
   .site-header {
-    padding-bottom: .5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
-  .site-header nav {
-    margin: 0;
+  .post-info {
+    flex-direction: column;
   }
 
+  .site-header nav,
   .site-header nav .nav-page {
-    margin: 0 .75rem;
-  }
-
-  .post-header {
     margin: 0;
   }
 
-  .site-footer hr {
-    margin-bottom: 1rem;
+  .site-footer {
+    margin: 0 2rem;
   }
 
   #theme-toggle {
     margin: 1rem 0;
     padding: 0;
   }
+
+  blockquote:before {
+    content: open-quote;
+    margin-left: -.5em;
+    margin-top: -.5em;
+  }
+
+  blockquote:after {
+    content: close-quote;
+    bottom: 0;
+    right: 0;
+    margin-right: -.5em;
+    margin-bottom: -.5em;
+  }
 }
 
-/* Code highlighting */
-
-pre, code {
-  font-family: Menlo, Courier, Consolas, monospace;
-  font-size: .9rem;
-  overflow: auto;
-  white-space: pre;
-}
-
-code.highlighter-rouge, .highlighter-rouge pre.highlight {
-  color: #f7f7f7;
-  background-color: #252525;
-  border: 1px solid var(--separator-color);
-  border-radius: 3px;
-  padding: .25rem .5rem;
-}
-
-code.highlighter-rouge {
-  margin: 0 .25rem;
-  padding: .15rem;
-}
-
-{% include syntax.css %}
-
-/* Fonts */
+/* Fonts *********************************************************************/
 
 @font-face {
-  font-family: 'Bitter';
+  font-family: "Zilla Slab";
   font-style: normal;
   font-weight: 400;
-  src: local('Bitter Regular'), local('Bitter-Regular'),
-       url('/assets/fonts/bitter-v15-latin-ext_latin-regular.woff2') format('woff2'),
-       url('/assets/fonts/bitter-v15-latin-ext_latin-regular.woff') format('woff');
+  src: local("Zilla Slab"), local("ZillaSlab-Regular"),
+       url("/assets/fonts/zilla-slab-v5-latin-regular.woff2") format("woff2"),
+       url("/assets/fonts/zilla-slab-v5-latin-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Bitter';
+  font-family: "Zilla Slab";
   font-style: italic;
   font-weight: 400;
-  src: local('Bitter Italic'), local('Bitter-Italic'),
-       url('/assets/fonts/bitter-v15-latin-ext_latin-italic.woff2') format('woff2'),
-       url('/assets/fonts/bitter-v15-latin-ext_latin-italic.woff') format('woff');
+  src: local("Zilla Slab Italic"), local("ZillaSlab-Italic"),
+       url("/assets/fonts/zilla-slab-v5-latin-italic.woff2") format("woff2"),
+       url("/assets/fonts/zilla-slab-v5-latin-italic.woff") format("woff");
 }
 
-/* Icon font */
+@font-face {
+  font-family: 'Zilla Slab';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Zilla Slab Medium'), local('ZillaSlab-Medium'),
+       url('/assets/fonts/zilla-slab-v5-latin-500.woff2') format('woff2'),
+       url('/assets/fonts/zilla-slab-v5-latin-500.woff') format('woff');
+}
 
 @font-face {
-  font-family: 'Icons';
-  src: url('/assets/fonts/icons.woff2') format('woff2'),
-       url('/assets/fonts/icons.woff') format('woff');
+  font-family: 'Zilla Slab';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Zilla Slab Medium Italic'), local('ZillaSlab-MediumItalic'),
+       url('/assets/fonts/zilla-slab-v5-latin-500italic.woff2') format('woff2'),
+       url('/assets/fonts/zilla-slab-v5-latin-500italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Zilla Slab SemiBold'), local('ZillaSlab-SemiBold'),
+       url('/assets/fonts/zilla-slab-v5-latin-600.woff2') format('woff2'),
+       url('/assets/fonts/zilla-slab-v5-latin-600.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Zilla Slab SemiBold Italic'), local('ZillaSlab-SemiBoldItalic'),
+       url('/assets/fonts/zilla-slab-v5-latin-600italic.woff2') format('woff2'),
+       url('/assets/fonts/zilla-slab-v5-latin-600italic.woff') format('woff');
+}
+
+/* Icons *********************************************************************/
+
+@font-face {
+  font-family: "Icons";
+  src: url("/assets/fonts/icons.woff2") format("woff2"),
+       url("/assets/fonts/icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
@@ -290,8 +398,8 @@ code.highlighter-rouge {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
-  color: var(--icon-color);
+  line-height: 1rem;
+  color: var(--accent-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
