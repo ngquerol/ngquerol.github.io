@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Projects
+group: navigation
 ---
 
 These are some of the things I have been working on:
 
 ## 🐃 [homebrew-guile](https://github.com/ngquerol/homebrew-guile)
 
-Provides [GNU Guile](https://github.com/ngquerol/homebrew-guile) 3 beta releases (2.9.x) for installation via [Homebrew](https://brew.sh).
+Provides [GNU Guile](https://github.com/ngquerol/homebrew-guile) 3 releases for installation via [Homebrew](https://brew.sh).
 
 ## 🗞 [Diurna](https://github.com/ngquerol/Diurna)
 

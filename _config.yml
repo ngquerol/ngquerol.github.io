@@ -28,6 +28,3 @@ kramdown:
   entity_output: as_char
   input: GFM
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true

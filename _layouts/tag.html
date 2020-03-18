@@ -2,18 +2,10 @@
 layout: page
 ---
 
-<ul>
+<ul class="posts">
   {% for post in site.posts %}
     {% if post.tags contains page.tag %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="faded">
-          &mdash;
-          <time datetime="{{ page.date | date_to_xmlschema }}">
-            {{ post.date | date: "%B %-d, %Y" }}
-          </time>
-        </span>
-      </li>
-    {% endif %}     
+      <li>{% include post-info.html post=site.post %}</li>
+    {% endif %}
   {% endfor %}
 </ul>

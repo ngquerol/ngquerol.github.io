@@ -30,22 +30,23 @@
   <body>
     <header class="site-header">
       <span class="site-title">
-        {{ site.title | escape }}
+        {{ site.title }}
+        <span id="theme-toggle" class="icon-light" title="Toggle theme"></span>
       </span>
-      <span id="theme-toggle" class="icon-light" title="Toggle theme"></span>
-      <nav>
-        <div class="nav-page">
+      <nav class="site-navigation">
+        <div class="nav-page {% if page.url == '/' %}nav-current{% endif %}">
           <span class="icon-about"></span>
           <a href="{{ site.url }}">About</a>
         </div>
-        <div class="nav-page">
-          <span class="icon-projects"></span>
-          <a href="{{ "projects" | relative_url }}">Projects</a>
-        </div>
-        <div class="nav-page">
-          <span class="icon-blog"></span>
-          <a href="{{ "posts" | relative_url }}">Posts</a>
-        </div>
+        {% assign nav_pages = site.pages | where: "group", "navigation" | sort: "title" %}
+        {% for node in nav_pages %}
+          {% assign page_root = page.url | split: "/" | shift | first %}
+          {% assign node_root = node.url | split: "/" | shift | first %}
+          <div class="nav-page {% if page_root == node_root %}nav-current{% endif %}">
+            <span class="icon-{{node.title | downcase }}"></span>
+            <a href="{{ node.url }}">{{ node.title }}</a>
+          </div>
+        {% endfor %}
       </nav>
     </header>
     <main class="page-content">

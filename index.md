@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Hey there !
+title: 👋 Hey there!
 ---
 
-I am a 25 year old French developer.
+I am a 27 year old developer.
 
 You can check my curriculum vitæ [here
-(🇫🇷)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf), and contact me via the
-following links :
+(🇫🇷)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf),
+and contact me via the following links :
 
 <div style="text-align: center">
   <span class="icon-mail"></span>
