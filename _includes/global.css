@@ -58,7 +58,16 @@ a {
   transition: color 250ms ease-out;
 }
 
- a:hover {
+a[href*="//"]:not([href*="{{ site.url }}"]):after {
+  content: "\27b6";
+  color: var(--text-secondary-color);
+  position: relative;
+  bottom: .5em;
+  left: .1em;
+  transition: color 250ms ease-out;
+}
+
+a:hover, a[href*="//"]:not([href*="{{ site.url }}"]):hover:after {
   color: var(--accent-color);
   border-color: currentColor;
 }
