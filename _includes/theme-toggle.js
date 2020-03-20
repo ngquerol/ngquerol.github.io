@@ -12,16 +12,16 @@ const setTheme = function(theme) {
 
 themeToggle.addEventListener("click", function() {
   const theme =
-    localStorage.getItem("color-scheme") === "dark" ? "light" : "dark";
+    sessionStorage.getItem("color-scheme") === "dark" ? "light" : "dark";
 
-  localStorage.setItem("color-scheme", theme);
+  sessionStorage.setItem("color-scheme", theme);
   setTheme(theme);
 });
 
-if (localStorage.getItem("color-scheme") === null) {
+if (sessionStorage.getItem("color-scheme") === null) {
   const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
 
-  localStorage.setItem("color-scheme", prefersDark ? "dark" : "light");
+  sessionStorage.setItem("color-scheme", prefersDark ? "dark" : "light");
 }
 
-setTheme(localStorage.getItem("color-scheme"));
+setTheme(sessionStorage.getItem("color-scheme"));
