@@ -127,7 +127,6 @@ td, th {
 }
 
 th {
-  color: var(--text-secondary-color);
   text-align: left;
 }
 
@@ -192,10 +191,6 @@ dd > p {
 
 .site-navigation .nav-page:not(.nav-current):not(:hover) {
   color: var(--text-secondary-color);
-}
-
-.site-navigation .nav-page:not(.nav-current) a {
-  font-weight: normal;
 }
 
 /* Footer ********************************************************************/
