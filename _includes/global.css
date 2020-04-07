@@ -329,7 +329,9 @@ code.highlighter-rouge {
   font-weight: normal;
   font-display: swap;
   font-style: normal;
-  src: url("/assets/fonts/IBMPlexSans-Regular.woff2") format("woff2");
+  src: local("IBMPlexSans-Regular") format("otf"),
+       local("IBMPlexSans-Regular") format("ttf"),
+       url("/assets/fonts/IBMPlexSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -337,7 +339,9 @@ code.highlighter-rouge {
   font-weight: normal;
   font-display: swap;
   font-style: italic;
-  src: url("/assets/fonts/IBMPlexSans-Italic.woff2") format("woff2");
+  src: local("IBMPlexSans-Italic") format("otf"),
+       local("IBMPlexSans-Italic") format("ttf"),
+       url("/assets/fonts/IBMPlexSans-Italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -345,7 +349,9 @@ code.highlighter-rouge {
   font-weight: bold;
   font-display: swap;
   font-style: normal;
-  src: url("/assets/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
+  src: local("IBMPlexSans-SemiBold") format("otf"),
+       local("IBMPlexSans-SemiBold") format("ttf"),
+       url("/assets/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -353,14 +359,18 @@ code.highlighter-rouge {
   font-weight: bold;
   font-display: swap;
   font-style: italic;
-  src: url("/assets/fonts/IBMPlexSans-SemiBoldItalic.woff2") format("woff2");
+  src: local("IBMPlexSans-SemiBoldItalic") format("otf"),
+       local("IBMPlexSans-SemiBoldItalic") format("ttf"),
+       url("/assets/fonts/IBMPlexSans-SemiBoldItalic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "IBM Plex Mono";
   font-weight: 400;
   font-display: swap;
-  src: url("/assets/fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2");
+  src: local("IBMPlexMono-Regular") format("otf"),
+       local("IBMPlexMono-Regular") format("ttf"),
+       url("/assets/fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2");
 }
 
 /* Icons *********************************************************************/
