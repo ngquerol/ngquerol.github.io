@@ -6,7 +6,12 @@ group: navigation
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li>{% include post-info.html post=site.post %}</li>
+    <li>
+      <a href="{{ post.url }}">
+        <h1 class="post-title">{{ post.title }}</h1>
+      </a>
+      {% include post-info.html post=post %}
+    </li>
   {% else %}
     <p>There's nothing to see here.</p>
   {% endfor %}

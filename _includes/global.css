@@ -1,16 +1,38 @@
-/* Theme variables ***********************************************************/
+/* Light & dark themes *******************************************************/
 
 :root {
   {% include light-theme-vars.css %}
-  --normal-font-family: "IBM Plex Sans", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  --monospace-font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
+  --normal-font-family: "IBM Plex Sans",
+                        "Helvetica Neue",
+                        "Segoe UI", Arial,
+                        Roboto,
+                        Oxygen-Sans, Ubuntu, Cantarell,
+                        sans-serif;
+  --monospace-font-family: "IBM Plex Mono",
+                           "Menlo",
+                           Courier,
+                           "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+                           monospace;
 }
 
 [data-theme="dark"] {
   {% include dark-theme-vars.css %}
 }
 
+[data-theme="dark"] img {
+  filter: brightness(.5) saturate(.25);
+  transition: 200ms ease-out filter;
+}
+
+[data-theme="dark"] img:hover {
+  filter: none;
+}
+
 /* Base elements *************************************************************/
+
+html { margin: 0; padding: 0; box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
   background-color: var(--background-color);
@@ -62,8 +84,8 @@ a[href*="//"]:not([href*="{{ site.url }}"]):after {
   content: "\27b6";
   color: var(--text-secondary-color);
   position: relative;
-  bottom: .5em;
-  left: .1em;
+  left: .1rem;
+  bottom: .5rem;
   transition: color 250ms ease-out;
 }
 
@@ -74,17 +96,20 @@ a:hover, a[href*="//"]:not([href*="{{ site.url }}"]):hover:after {
 
 img {
   display: block;
-  max-width: 100%;
-  margin: 2rem auto;
-  filter: drop-shadow(0 0 4px var(--text-secondary-color));
+  border: 1px solid var(--text-secondary-color);
+  border-radius: 5px;
+  max-width: 110%;
+  margin: 1rem -2rem;
 }
 
 blockquote {
   color: var(--text-secondary-color);
+  font-style: italic;
   margin: 0 1rem;
 }
 
 blockquote:before, blockquote cite:before {
+  font-style: normal;
   float: left;
   margin: 0 0 0 -1rem;
 }
@@ -112,7 +137,7 @@ kbd {
   display: inline-block;
   line-height: 1rem;
   margin: 0 .5rem;
-  padding: .5rem .5rem;
+  padding: .25rem .25rem;
 }
 
 table {
@@ -142,6 +167,8 @@ abbr {
   border-bottom: 1px dashed currentColor;
   cursor: help;
 }
+
+dt { font-weight: bold; }
 
 dt:before {
   content: "\261e";
@@ -223,6 +250,10 @@ dd > p {
   justify-content: space-between;
 }
 
+.post-info [class^="icon-"] {
+  color: var(--text-secondary-color);
+}
+
 .post-title {
   margin-bottom: .5rem;
 }
@@ -251,8 +282,11 @@ dd > p {
 
 .footnotes li:target {
   color: var(--accent-color);
-  border-radius: 5px;
   padding: 0 .5rem;
+}
+
+.footnote {
+  margin-left: .25rem;
 }
 
 /* Code blocks & highlighting ************************************************/
@@ -265,6 +299,17 @@ pre.highlight, code.highlighter-rouge {
 pre.highlight {
   margin: 0 -2rem;
   padding: .5rem 1rem;
+}
+
+pre.highlight .c,
+pre.highlight .ch,
+pre.highlight .cd,
+pre.highlight .cm,
+pre.highlight .cpf,
+pre.highlight .c1,
+pre.highlight .cs {
+  color: var(--text-secondary-color);
+  font-style: italic;
 }
 
 code.highlighter-rouge {
@@ -326,41 +371,50 @@ code.highlighter-rouge {
 
 @font-face {
   font-family: "IBM Plex Sans";
+  font-style: normal;
   font-weight: normal;
   font-display: swap;
-  font-style: normal;
-  src: url("/assets/fonts/IBMPlexSans-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/IBMPlexSans-Regular-Latin1.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
+  font-style: italic;
   font-weight: normal;
   font-display: swap;
-  font-style: italic;
-  src: url("/assets/fonts/IBMPlexSans-Italic.woff2") format("woff2");
+  src: url("/assets/fonts/IBMPlexSans-Italic-Latin1.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
-  font-weight: bold;
-  font-display: swap;
   font-style: normal;
-  src: url("/assets/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+  src: url("/assets/fonts/IBMPlexSans-SemiBold-Latin1.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
+  font-style: italic;
   font-weight: bold;
   font-display: swap;
-  font-style: italic;
-  src: url("/assets/fonts/IBMPlexSans-SemiBoldItalic.woff2") format("woff2");
+  src: url("/assets/fonts/IBMPlexSans-SemiBoldItalic-Latin1.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "IBM Plex Mono";
-  font-weight: 400;
+  font-style: normal;
+  font-weight: normal;
   font-display: swap;
   src: url("/assets/fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/assets/fonts/IBMPlexMono-Italic-Latin1.woff2") format("woff2");
 }
 
 /* Icons *********************************************************************/
@@ -373,9 +427,8 @@ code.highlighter-rouge {
   font-display: block;
 }
 
-[class^="icon-"],[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   font-family: "Icons" !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -385,12 +438,15 @@ code.highlighter-rouge {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-about:before { content: "\e800"; }
-.icon-blog:before { content: "\e801"; }
-.icon-projects:before { content: "\e802"; }
-.icon-light:before { content: "\e803"; }
-.icon-dark:before {content: "\e804"; }
-.icon-mail:before {content: "\e805"; }
-.icon-ghub:before {content: "\e806"; }
-.icon-lnkdn:before {content: "\e807"; }
-.icon-twttr:before {content: "\e808"; }
+.icon-date:before { content: "\e900"; }
+.icon-blog:before { content: "\e901"; }
+.icon-about:before { content: "\e902"; }
+.icon-projects:before { content: "\e903"; }
+.icon-light:before { content: "\e904"; }
+.icon-dark:before { content: "\e905"; }
+.icon-mail:before { content: "\e90c"; }
+.icon-tag:before { content: "\e906"; }
+.icon-syndication:before { content: "\e907"; }
+.icon-ghub:before { content: "\e908"; }
+.icon-lnkdn:before { content: "\e909"; }
+.icon-twttr:before { content: "\e90a"; }
