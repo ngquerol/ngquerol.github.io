@@ -20,11 +20,3 @@ permalink: /blog/:year/:month/:day/:title
 twitter_username: ngquerol
 github_username: ngquerol
 linkedin_username: nicolasgaulardquerol
-
-# Markdown settings
-kramdown:
-  auto_ids: false
-  enable_coderay: false
-  entity_output: as_char
-  input: GFM
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
