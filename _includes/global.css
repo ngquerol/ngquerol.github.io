@@ -50,16 +50,18 @@ pre, code {
   white-space: pre-wrap;
 }
 
-ul {
+ul, ol {
   list-style-type: none;
 }
 
-ul ul {
-  margin: 1rem 0;
+ul li:not(:first-of-type),
+ol li:not(:first-of-type) {
+  margin-top: 1rem;
 }
 
-ul li:not(:first-of-type) {
-  margin-top: 1rem;
+ul ul, ol ol {
+  margin: 1rem 0;
+  padding-left: 1rem;
 }
 
 ul li:before {
@@ -68,9 +70,21 @@ ul li:before {
   color: var(--text-secondary-color);
 }
 
-article > ul, section > ul {
-  margin-left: 0;
-  padding-left: 0;
+ol {
+  counter-reset: item;
+}
+
+ol li:before {
+  counter-increment: item;
+  content: counters(item, ".") ")";
+  color: var(--text-secondary-color);
+  margin-right: .5rem;
+}
+
+article > ul, section > ul,
+article > ol, section > ol {
+  margin-left: .5rem;
+  padding-left: .5rem;
 }
 
 a {
@@ -287,6 +301,19 @@ dd > p {
 
 .footnote {
   margin-left: .25rem;
+}
+
+#markdown-toc:before {
+  content: "Contents";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: -1rem;
+  margin-bottom: 1.5Rem;
+  display: inline-block;
+}
+
+#markdown-toc li:before {
+  content: counters(item, ".", upper-roman) ")";
 }
 
 /* Code blocks & highlighting ************************************************/
