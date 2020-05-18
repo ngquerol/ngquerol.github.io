@@ -3,7 +3,7 @@ title: ngquerol
 author: Nicolas Gaulard-Querol
 description: "Nicolas Gaulard-Querol's personal website."
 email: nicolas.gquerol@gmail.com
-baseurl: ""
+baseurl: "/"
 timezone: Europe/Paris
 exclude:
   - Gemfile
