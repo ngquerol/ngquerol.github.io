@@ -45,13 +45,37 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-pre, code {
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2.5rem;
+}
+
+h1, h2 {
+  line-height: 3rem;
+}
+
+h3, h4 {
+  line-height: 2rem;
+}
+
+h5, h6 {
+  line-height: 1.5rem;
+}
+
+pre, code, kbd {
   font: 16px/26px var(--monospace-font-family);
-  white-space: pre-wrap;
+  background-color: var(--code-background-color);
+  border-radius: 5px;
+  overflow-x: scroll;
+}
+
+kbd {
+  padding: .25rem;
 }
 
 ul, ol {
   list-style-type: none;
+  margin-left: 0;
+  padding-left: 1rem;
 }
 
 ul li:not(:first-of-type),
@@ -79,12 +103,6 @@ ol li:before {
   content: counters(item, ".") ")";
   color: var(--text-secondary-color);
   margin-right: .5rem;
-}
-
-article > ul, section > ul,
-article > ol, section > ol {
-  margin-left: .5rem;
-  padding-left: .5rem;
 }
 
 a {
@@ -141,17 +159,6 @@ hr {
   border: none;
   height: 1px;
   width: 100%;
-}
-
-kbd {
-  color: var(--text-default-color);
-  font-family: var(--normal-font-family);
-  border: 2px solid var(--text-secondary-color);
-  border-radius: 3px;
-  display: inline-block;
-  line-height: 1rem;
-  margin: 0 .5rem;
-  padding: .25rem .25rem;
 }
 
 table {
@@ -272,15 +279,6 @@ dd > p {
   margin-bottom: .5rem;
 }
 
-.page-content h1,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-  margin-top: 4rem;
-}
-
 .posts li:before {
   content: none;
 }
@@ -290,13 +288,32 @@ dd > p {
 }
 
 .footnotes {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--text-secondary-color);
   color: var(--text-secondary-color);
 }
 
-.footnotes li:target {
+.footnotes ol {
+  counter-reset: footnote;
+}
+
+.footnotes li p:first-of-type {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.footnotes li:before {
+  counter-increment: footnote;
+  content: counters(footnote, "");
+  vertical-align: super;
+  font-size: smaller;
+  font-weight: bolder;
+  margin-right: 0;
+}
+
+.footnotes li:target,
+.footnotes li:target:before {
   color: var(--accent-color);
-  padding: 0 .5rem;
 }
 
 .footnote {
@@ -308,24 +325,23 @@ dd > p {
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: -1rem;
-  margin-bottom: 1.5Rem;
+  margin-bottom: 1.5rem;
   display: inline-block;
 }
 
-#markdown-toc li:before {
+ol#markdown-toc li:before {
   content: counters(item, ".", upper-roman) ")";
 }
 
 /* Code blocks & highlighting ************************************************/
 
-pre.highlight, code.highlighter-rouge {
-  background-color: var(--code-background-color);
-  border-radius: 5px;
-}
-
 pre.highlight {
   margin: 0 -2rem;
   padding: .5rem 1rem;
+}
+
+pre.highlight > code {
+  background-color: transparent;
 }
 
 pre.highlight .c,
@@ -340,7 +356,7 @@ pre.highlight .cs {
 }
 
 code.highlighter-rouge {
-  padding: .1rem .25rem;
+  padding: .25rem;
 }
 
 /* Media queries *************************************************************/
