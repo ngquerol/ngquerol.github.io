@@ -213,6 +213,11 @@ dd > p {
   margin: .5rem 0;
 }
 
+hr {
+  margin: 1rem auto;
+  width: 50%;
+}
+
 /* Header ********************************************************************/
 
 .site-header {
@@ -254,10 +259,6 @@ dd > p {
   text-align: center;
 }
 
-.site-footer hr {
-  margin: 1rem 25%;
-}
-
 /* Contents ******************************************************************/
 
 .page-title, .post-header {
@@ -290,9 +291,30 @@ dd > p {
   margin-bottom: 2rem;
 }
 
+.post-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.post-navigation-previous:before,
+.post-navigation-next:after {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.post-navigation-previous:before {
+  content: "\261c";
+  margin-right: .5rem;
+}
+
+.post-navigation-next:after {
+  content: "\261e";
+  margin-left: .5rem;
+}
+
 .footnotes {
-  margin-top: 2.5rem;
-  border-top: 1px solid var(--text-secondary-color);
   color: var(--text-secondary-color);
 }
 
@@ -365,8 +387,12 @@ code.highlighter-rouge {
 /* Media queries *************************************************************/
 
 @media screen and (max-width: 767px) {
-  pre.highlight {
-    margin: 0;
+  pre.highlight, img {
+    margin: 1rem 0;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   .site-header {
@@ -410,6 +436,16 @@ code.highlighter-rouge {
 
   .post-info {
     flex-direction: column;
+  }
+
+  .post-navigation {
+    margin-top: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .post-navigation-previous {
+    margin-bottom: 1rem;
   }
 }
 
