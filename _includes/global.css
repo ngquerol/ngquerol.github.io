@@ -409,7 +409,7 @@ code.highlighter-rouge {
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 479px) {
   .page-title {
     text-align: center;
   }
