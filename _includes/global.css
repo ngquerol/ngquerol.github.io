@@ -214,8 +214,12 @@ dd > p {
 }
 
 hr {
-  margin: 1rem auto;
+  margin: 0 auto;
   width: 50%;
+}
+
+article {
+  margin-bottom: 2rem;
 }
 
 /* Header ********************************************************************/
@@ -280,7 +284,7 @@ hr {
 }
 
 .post-title {
-  margin-bottom: .5rem;
+  margin-bottom: 0;
 }
 
 .posts li:before {
@@ -294,22 +298,31 @@ hr {
 .post-navigation {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1rem;
 }
 
-.post-navigation-previous:before,
-.post-navigation-next:after {
+.post-navigation p {
+  flex: 1 1 0;
+  width: 45%;
+}
+
+.post-navigation .next {
+  text-align: right;
+}
+
+.post-navigation .previous:before,
+.post-navigation .next:after {
   font-size: 2rem;
   vertical-align: middle;
 }
 
-.post-navigation-previous:before {
+.post-navigation .previous:before {
   content: "\261c";
   margin-right: .5rem;
 }
 
-.post-navigation-next:after {
+.post-navigation .next:after {
   content: "\261e";
   margin-left: .5rem;
 }
@@ -381,7 +394,7 @@ pre.highlight .cs {
 }
 
 code.highlighter-rouge {
-  padding: .25rem;
+  padding: .125rem .25rem;
 }
 
 /* Media queries *************************************************************/
@@ -401,7 +414,7 @@ code.highlighter-rouge {
   }
 
   .page-content {
-    margin: 1rem;
+    margin: 0 1rem;
   }
 
   .site-footer {
@@ -436,16 +449,6 @@ code.highlighter-rouge {
 
   .post-info {
     flex-direction: column;
-  }
-
-  .post-navigation {
-    margin-top: 2rem;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .post-navigation-previous {
-    margin-bottom: 1rem;
   }
 }
 
