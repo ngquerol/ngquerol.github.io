@@ -13,6 +13,6 @@ group: navigation
       {% include post-info.html post=post %}
     </li>
   {% else %}
-    <p>There's nothing to see here.</p>
+    <p class="posts-placeholder">There's nothing to see here.</p>
   {% endfor %}
 </ul>
