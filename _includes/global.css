@@ -161,7 +161,8 @@ hr {
   background-color: var(--text-secondary-color);
   border: none;
   height: 1px;
-  width: 100%;
+  margin: 1.5rem auto;
+  width: 50%;
 }
 
 table {
@@ -192,6 +193,12 @@ abbr {
   cursor: help;
 }
 
+address {
+  font-style: normal;
+  text-align: center;
+  margin: 1rem auto;
+}
+
 dt { font-weight: bold; }
 
 dt:before {
@@ -211,11 +218,6 @@ dd {
 
 dd > p {
   margin: .5rem 0;
-}
-
-hr {
-  margin: 0 auto;
-  width: 50%;
 }
 
 article {
@@ -261,6 +263,10 @@ article {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+}
+
+.site-footer p {
+  margin-top: 0;
 }
 
 /* Contents ******************************************************************/
@@ -310,6 +316,7 @@ article {
 .post-navigation p {
   flex: 1 1 0;
   width: 45%;
+  margin: 0;
 }
 
 .post-navigation .next {
@@ -320,6 +327,7 @@ article {
 .post-navigation .next:after {
   font-size: 2rem;
   vertical-align: middle;
+  color: var(--text-secondary-color);
 }
 
 .post-navigation .previous:before {
@@ -361,15 +369,6 @@ article {
 
 .footnote {
   margin-left: .25rem;
-}
-
-#markdown-toc:before {
-  content: "Contents";
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: -1rem;
-  margin-bottom: 1.5rem;
-  display: inline-block;
 }
 
 ol#markdown-toc li:before {
