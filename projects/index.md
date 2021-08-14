@@ -6,9 +6,10 @@ group: navigation
 
 These are some of the things I have been working on:
 
-## 🐃 [homebrew-guile](https://github.com/ngquerol/homebrew-guile)
+## 🐃 [Emacs 28 system appearance](https://gist.github.com/ngquerol/33e099eceae527b368bdf196c95d1ba3)
 
-Provides [GNU Guile](https://www.gnu.org/software/guile) 3 releases for installation via [Homebrew](https://brew.sh).
+Patch to make emacs 28 aware of macOS 10.14+ system appearance changes.
+Also available for Emacs 27 [here](https://gist.github.com/ngquerol/8f430884386d1fcc4e216e484cc44c59).
 
 ## 🗞 [Diurna](https://github.com/ngquerol/Diurna)
 
@@ -17,8 +18,3 @@ A crude Hacker News reader based on the official [Firebase API](https://github.c
 >  __Acta Diurna__ _(Latin: “things that have been done”)_ :<br/>
 >  In ancient Rome, minutes of official business _(Acta senatus)_ and a gazette
 >  of political and social events _(Acta diurna)_
-
-## 🐳 [DockerStatsMenu](https://github.com/ngquerol/DockerStatsMenu)
-
-A macOS 10.11+ menu bar app to manage Docker containers.
-Interacts with the Docker daemon via an IPC Unix socket, over HTTP.
