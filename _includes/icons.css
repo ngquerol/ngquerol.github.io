@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Icons";
+  src: url("/assets/fonts/Icons.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "Icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  color: var(--accent-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-date:before { content: "\e900"; }
+.icon-blog:before { content: "\e901"; }
+.icon-about:before { content: "\e902"; }
+.icon-projects:before { content: "\e903"; }
+.icon-light:before { content: "\e904"; }
+.icon-dark:before { content: "\e905"; }
+.icon-mail:before { content: "\e90c"; }
+.icon-tag:before { content: "\e906"; }
+.icon-syndication:before { content: "\e907"; }
+.icon-ghub:before { content: "\e908"; }
+.icon-lnkdn:before { content: "\e909"; }
+.icon-twttr:before { content: "\e90a"; }

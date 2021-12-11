@@ -1,14 +1,19 @@
-/* Light & dark themes *******************************************************/
+/* Fonts, light & dark themes *************************************************/
 
 :root {
   {% include light-theme-vars.css %}
   --sans-font-family: "IBM Plex Sans",
                       ui-sans-serif,
                       system-ui, -apple-system, BlinkMacSystemFont,
-                      "Helvetica Neue",
-                      "Segoe UI", Arial,
-                      Roboto,
-                      Oxygen-Sans, Ubuntu, Cantarell,
+                      "Helvetica Neue", Helvetica,
+                      "Arial Nova", "Arial",
+                      "DejaVu Sans", "Liberation Sans",
+                      sans-serif;
+  --serif-font-family: "IBM Plex Serif",
+                      ui-serif,
+                      Georgia, Times,
+                      "Palatino", "Times New Roman",
+                      "DejaVu Serif", "Liberation Serif",
                       sans-serif;
   --monospace-font-family: "IBM Plex Mono",
                            ui-monospace,
@@ -64,6 +69,10 @@ h5, h6 {
   line-height: 1.5rem;
 }
 
+p {
+  font-family: var(--serif-font-family);
+}
+
 pre, code, kbd {
   font: 16px/26px var(--monospace-font-family);
   background-color: var(--code-background-color);
@@ -76,6 +85,7 @@ kbd {
 }
 
 ul, ol {
+  font-family: var(--serif-font-family);
   list-style-type: none;
   margin-left: 0;
   padding-left: 1rem;
@@ -138,6 +148,7 @@ img {
 }
 
 blockquote {
+  font-family: var(--serif-font-family);
   color: var(--text-secondary-color);
   font-style: italic;
   margin: 0 1rem;
@@ -465,84 +476,8 @@ code.highlighter-rouge {
 
 /* Fonts *********************************************************************/
 
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("/assets/fonts/IBMPlexSans-Regular-Latin1.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: italic;
-  font-weight: normal;
-  font-display: swap;
-  src: url("/assets/fonts/IBMPlexSans-Italic-Latin1.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: url("/assets/fonts/IBMPlexSans-SemiBold-Latin1.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: italic;
-  font-weight: bold;
-  font-display: swap;
-  src: url("/assets/fonts/IBMPlexSans-SemiBoldItalic-Latin1.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("/assets/fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-style: italic;
-  font-weight: normal;
-  font-display: swap;
-  src: url("/assets/fonts/IBMPlexMono-Italic-Latin1.woff2") format("woff2");
-}
+{% include fonts.css %}
 
 /* Icons *********************************************************************/
 
-@font-face {
-  font-family: "Icons";
-  src: url("/assets/fonts/Icons.woff2") format("woff2");
-  font-style: normal;
-  font-weight: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: "Icons" !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  color: var(--accent-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-date:before { content: "\e900"; }
-.icon-blog:before { content: "\e901"; }
-.icon-about:before { content: "\e902"; }
-.icon-projects:before { content: "\e903"; }
-.icon-light:before { content: "\e904"; }
-.icon-dark:before { content: "\e905"; }
-.icon-mail:before { content: "\e90c"; }
-.icon-tag:before { content: "\e906"; }
-.icon-syndication:before { content: "\e907"; }
-.icon-ghub:before { content: "\e908"; }
-.icon-lnkdn:before { content: "\e909"; }
-.icon-twttr:before { content: "\e90a"; }
+{% include icons.css %}
