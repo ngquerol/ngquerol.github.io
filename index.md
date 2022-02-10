@@ -3,12 +3,6 @@ layout: page
 title: 👋 Hey there!
 ---
 
-I am a 29 year old developer.
-
-You can check my curriculum vitæ [here
-(🇫🇷)](/assets/files/CV_Nicolas_Gaulard-Querol.pdf),
-and contact me via the following links :
-
 <address class="addr-list">
   <span class="addr">
     <span class="icon-mail"></span>
